@@ -1,0 +1,41 @@
+.container h1{
+    padding-top: 40px;
+    text-align: center;
+}
+.leiras p{
+    text-indent: 20px;
+    margin-right: 60px;
+    margin-left: 60px;
+    text-align: justify;
+    
+}
+.leiras{
+    background-color: rgb(195, 236, 223, 0.7);
+    border-radius: 1%;    
+}
+.leiras h3{
+    margin-left: 60px;
+    padding-bottom: 15px;
+}
+.kep0{
+    height: 10vh;
+    min-height: 100px;
+    
+}
+.egyediteszt{
+    background-image: url("../../img/hatter.png");
+    max-width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.vegez{
+    background-color: rgb(195, 236, 223, 0.7);
+    border-radius: 1%; 
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-bottom: 5px;
+    
+    
+}

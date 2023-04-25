@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/stilus.css" />
+        <title>Kollégáink</title>
+    </head>
+    <body>
+        <nav>
+            <li><a href="/">Admin</a></li>
+            <li><a href="/examination">Vizsgálat</a></li>
+            <li><a href="/doctor">Doktor</a></li>
+            <li><a href="/chosentest">Tesztfoglalások</a></li>
+        </nav>
+        <h1>Doktorok feltöltése</h1>
+        <form>
+            <label for="name">Név:</label>
+            <input type="text" name="name" id="name" /><br />
+            <label for="skill">Végzettség:</label>
+            <input type="text" name="skill" id="skill" /><br />
+            <label for="image">Image:</label>
+            <input type="text" name="image" id="image" /><br />
+            <button type="submit" onclick="doktorFeltolt()">Feltölt</button>
+        </form>
+        <h1>Doktorok</h1>
+        <% adatok.forEach(element => { %>
+        <ol>
+            <li><%= element.name %></li>
+            <li><%= element.skill %></li>
+            <li><%= element.image %></li>
+            <button onclick="doktorTorol('<%= element._id %>')">Töröl</button>
+        </ol>
+        <% }) %>
+        <script src="./scripts/things.js"></script>
+    </body>
+</html>

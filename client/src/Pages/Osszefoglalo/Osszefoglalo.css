@@ -1,0 +1,27 @@
+.ossz-kep0{
+    height: 10vh;
+    min-height: 100px;
+}
+.osszefoglalo-h{
+    margin-right: 300px;
+    margin-left: 300px;
+    background-image: url("../../img/4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.osszefoglalo{
+    padding-bottom: 5px;
+    background-color: rgb(207, 205, 202, 0.4);
+    font-size: 110%;
+}
+.osszefoglalo h1{
+    margin-left: 50px;
+}
+
+.osszefoglalo p{
+    margin-left: 25px;
+}
+.osszefoglalo img{
+    margin-left: 25px;
+}

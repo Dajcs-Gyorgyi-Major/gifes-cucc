@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/stilus.css" />
+        <title>Vizsgálatok</title>
+    </head>
+    <body>
+        <nav>
+            <li><a href="/">Admin</a></li>
+            <li><a href="/examination">Vizsgálat</a></li>
+            <li><a href="/doctor">Doktor</a></li>
+            <li><a href="/chosentest">Tesztfoglalások</a></li>
+        </nav>
+        <h1>Tesztfoglalások</h1>
+        <% chosenTest.forEach(element => { %>
+        <ol>
+            <li><%= element.datum %></li>
+            <li><%= element.client.name %></li>
+            <li><%= element.client.phone %></li>
+            <li><%= element.client.email %></li>
+            <li><%= element.examination.title %></li>
+            <li><%= element.doctor.name %></li>
+            <button onclick="tesztTorol('<%= element._id %>')">Töröl</button>
+        </ol>
+        <% }) %>
+        <script src="./scripts/things.js"></script>
+    </body>
+</html>

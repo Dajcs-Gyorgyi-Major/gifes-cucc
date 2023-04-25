@@ -1,0 +1,46 @@
+mongodb+srv://pepe:pepe@project.bzn1r3v.mongodb.net/tesztek
+
+const gentestItems = [
+    {
+      id: 1,
+      title: "Kromoszomális nem meghatározás / férfi meddőség vérből",
+      description: "22000 Ft",
+      image: Image,
+      url: "",
+    },
+    {
+      id: 2,
+      title: "Alzheimer kór hajlam genetika vérből",
+      description: "39000 Ft",
+      image: Image,
+      url: "",
+    },
+    {
+      id: 3,
+      title: "Sportgenetika és táplálkozás",
+      description: "260000 Ft",
+      image: Image,
+      url: "",
+    },
+    {
+      id: 4,
+      title: "Leiden mutáció",
+      description: "12000",
+      image: Image,
+      url: "",
+    },
+    {
+      id: 5,
+      title: "Tejcukor/laktóz-érzékenység",
+      description: "15000 Ft",
+      image: Image,
+      url: "",
+    },
+    {
+      id: 6,
+      title: "PREMIUM+ 25 GÉNTÉRKÉP",
+      description: "850000 Ft",
+      image: Image,
+      url: "",
+    },
+  ];

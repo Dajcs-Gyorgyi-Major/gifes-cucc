@@ -1,0 +1,21 @@
+.kep2{
+    height: 100vh;
+    min-height: 100px;
+    background-image: url("../../img/2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center, center;
+    color:white;
+}
+h2{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(172, 201, 199);
+    text-align: center;
+    
+}
+.container{
+    line-height: 200%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:115%;
+}
