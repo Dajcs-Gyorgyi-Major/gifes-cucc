@@ -16,47 +16,61 @@ const EgyediTeszt = () => {
         let datum = ugyfel[3].value;
         // let stDatum = datum.toString();
         console.log(teszt._id, id, name, phone, email, datum);
+
+        
+
+
+        
         const feltolt = async () => {
             try {
+              // lekérjük a mai dátumot és a kiválasztott dátumot
+              const today = new Date();
+              const selectedDate = new Date(datum);
+          
+              // összehasonlítjuk a két dátumot
+              if (selectedDate.getTime() > today.getTime()) {
+                // ha a kiválasztott dátum később van, mint a mai dátum
                 const kuld = {
-                    name,
-                    phone,
-                    email,
-                    datum,
-                    examinationId: teszt._id,
-                    doctorId: id,
+                  name,
+                  phone,
+                  email,
+                  datum,
+                  examinationId: teszt._id,
+                  doctorId: id,
                 };
-
-                const response = await fetch(
-                    'http://localhost:3500/chosentest',
-                    {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify(kuld),
-                    }
-                );
-
+          
+                const response = await fetch('http://localhost:3500/chosentest', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify(kuld),
+                });
+          
                 if (response.ok) {
-                    const res = await response.json();
-                    console.log(res);
-                    localStorage.setItem('datum', datum);
-                    localStorage.setItem('name', name);
-                    localStorage.setItem('phone', phone);
-                    localStorage.setItem('email', email);
-                    localStorage.setItem('vizsgalat', res.examination.title);
-                    localStorage.setItem('doktor', res.doctor.name);
-                    localStorage.setItem('doktorkep', res.doctor.image);
-                    navigate('/osszefoglalo');
+                  const res = await response.json();
+                  console.log(res);
+                  localStorage.setItem('datum', datum);
+                  localStorage.setItem('name', name);
+                  localStorage.setItem('phone', phone);
+                  localStorage.setItem('email', email);
+                  localStorage.setItem('vizsgalat', res.examination.title);
+                  localStorage.setItem('doktor', res.doctor.name);
+                  localStorage.setItem('doktorkep', res.doctor.image);
+                  navigate('/osszefoglalo');
                 } else {
-                    const res = await response.json();
-                    console.log(res.msg);
+                  const res = await response.json();
+                  console.log(res.msg);
                 }
+              } else {
+                // ha a kiválasztott dátum korábbi vagy megegyezik a mai dátummal
+                console.log('A kiválasztott dátum nem megfelelő!');
+                alert('A kiválasztott dátum nem megfelelő!');
+              }
             } catch (error) {
-                console.log('Valami nem jó!');
+              console.log('Valami nem jó!');
             }
-        };
+          };
 
         feltolt();
     };
